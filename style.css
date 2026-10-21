@@ -11,24 +11,24 @@ header {
     border-bottom: 5px solid #a6382d;
     color: white;
     padding: 2rem 1.5rem 1rem;
-}
+} 
 
 .header-content {
     margin: 0 auto;
     max-width: 900px;
 }
 
-.eyebrow {
-    color: #e7b8ad;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin: 0 0 0.35rem;
-}
 
 h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
+}
+
+@media (width >= 1200px) {
+    h1 {
+        font-size: 4rem;
+    }
 }
 
 .tagline {
@@ -54,7 +54,7 @@ nav a:hover {
 
 main {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 100%;
     padding: 2rem 1.25rem;
 }
 
@@ -73,9 +73,7 @@ main {
 .profile-image {
     border: 4px solid #eee6dc;
     border-radius: 8px;
-    height: auto;
     max-width: 100%;
-    width: 200px;
 }
 
 .intro-copy h2 {
@@ -122,9 +120,21 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (width > 1300px) {
+    .grid {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: "nav main photos";
+    }
+
+    nav ul {flex-direction: column;}
+    nav li {flex: unset;}
+
     h1 {
-        font-size: 2rem;
+        font-size: calc(1.3rem + 3vw);
+    }
+    h2 { 
+        font-size: calc(1rem + 2vw);
+        margin: 0;
     }
 
     nav {
